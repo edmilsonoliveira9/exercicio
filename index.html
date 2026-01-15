@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop Paradise - Tudo para seu Pet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+        }
+
+        nav {
+            background-color: #ff5252;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .banner {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .banner img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #ff6b6b;
+            margin: 3rem 0 2rem;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h3 {
+            color: #ff6b6b;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #ff5252;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff5252;
+        }
+
+        .about {
+            background-color: #f0f0f0;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+
+        .about h2 {
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #ff6b6b;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐾 PetShop Paradise 🐾</h1>
+        <p>Tudo para o bem-estar do seu melhor amigo</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        <section class="banner">
+            <img src="https://images.unsplash.com/photo-1450881833971-122adf541b4d?w=1200&h=400&fit=crop" alt="Banner PetShop">
+        </section>
+
+        <section class="about">
+            <h2>Bem-vindo ao PetShop Paradise</h2>
+            <p>Somos a loja ideal para todos os seus animais de estimação! Contamos com uma variedade completa de produtos para cães, gatos, pássaros e pequenos roedores. Além disso, oferecemos serviços de banho, tosa e consultoria veterinária.</p>
+        </section>
+
+        <h2 class="section-title">Nossos Produtos</h2>
+        <section class="products">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1535241749838-299e2e360f96?w=300&h=250&fit=crop" alt="Ração Premium">
+                <div class="product-info">
+                    <h3>Ração Premium</h3>
+                    <p>Ração de alta qualidade para cães e gatos</p>
+                    <div class="price">R$ 89,90</div>
+                    <button class="btn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=250&fit=crop" alt="Brinquedos">
+                <div class="product-info">
+                    <h3>Brinquedos Divertidos</h3>
+                    <p>Brinquedos seguros e estimulantes</p>
+                    <div class="price">R$ 34,90</div>
+                    <button class="btn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1576201160550-2173dba999ef?w=300&h=250&fit=crop" alt="Cama Confortável">
+                <div class="product-info">
+                    <h3>Cama Confortável</h3>
+                    <p>Cama aconchegante para descanso</p>
+                    <div class="price">R$ 129,90</div>
+                    <button class="btn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=300&h=250&fit=crop" alt="Acessórios">
+                <div class="product-info">
+                    <h3>Coleira e Guia</h3>
+                    <p>Coleiras e guias em várias cores</p>
+                    <div class="price">R$ 49,90</div>
+                    <button class="btn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5f400f6f0?w=300&h=250&fit=crop" alt="Higiene">
+                <div class="product-info">
+                    <h3>Produtos de Higiene</h3>
+                    <p>Shampoo e produtos de limpeza</p>
+                    <div class="price">R$ 39,90</div>
+                    <button class="btn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1535241749838-299e2e360f96?w=300&h=250&fit=crop" alt="Petiscos">
+                <div class="product-info">
+                    <h3>Petiscos Saudáveis</h3>
+                    <p>Petiscos naturais e nutritivos</p>
+                    <div class="price">R$ 24,90</div>
+                    <button class="btn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PetShop Paradise - Todos os direitos reservados</p>
+        <p>📞 Telefone: (11) 9999-9999 | 📧 Email: contato@petshopparadise.com.br</p>
+        <p>Endereço: Rua dos Pets, 123 - São Paulo, SP</p>
+    </footer>
+</body>
+</html>
