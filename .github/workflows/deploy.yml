@@ -1,0 +1,37 @@
+# Nome do workflow exibido no GitHub
+name: Deploy GitHub Pages
+
+# Evento que dispara o workflow
+on:
+  push:
+    # Executa quando há push na branch main
+    branches:
+      - main
+
+# Permissões necessárias para o workflow
+permissions:
+  contents: read  # Permissão para ler conteúdo do repositório
+  pages: write    # Permissão para escrever no GitHub Pages
+  id-token: write # Permissão para usar OIDC token
+
+# Definição dos jobs do workflow
+jobs:
+  deploy:
+    # Sistema operacional onde o job será executado
+    runs-on: ubuntu-latest
+
+    # Lista de passos a executar no job
+    steps:
+      # Passo 1: Faz checkout do código
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Passo 2: Faz upload dos arquivos para o artefato do Pages
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: . # Usa o diretório raiz como conteúdo a fazer upload
+
+      # Passo 3: Faz deploy do artefato no GitHub Pages
+      - name: Deploy
+        uses: actions/deploy-pages@v4
